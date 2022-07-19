@@ -1,0 +1,125 @@
+* {
+    font-family: 'Space Mono', monospace;
+    margin: 0;
+    padding: 0;
+    outline: none;
+    box-sizing: border-box;
+}
+
+:root {
+    --color-strong-cyan: hsl(172, 67%, 45%);
+    --color-very-dark-cyan: hsl(183, 100%, 15%);
+    --color-dark-gray-cyan: hsl(186, 14%, 43%);
+    --color-dark-grayish-cyan: hsl(184, 14%, 56%);
+    --color-light-gray-cyan: hsl(185, 41%, 84%);
+    --color-light-grayish-cyan: hsl(189, 41%, 97%);
+    --color-white: hsl(0, 0%, 100%);
+}
+
+input[type='number'] {
+    -moz-appearance: textfield;
+}
+
+input {
+    font-size: 24px;
+    /* border: 3px; */
+    /* border-radius: 4px; */
+}
+
+.tipItem {
+    width: 80px;
+    display: flex;
+}
+
+body {
+    background-color: var(--color-light-gray-cyan);
+    margin: 0 20em;
+    display: grid;
+}
+
+.main {
+    display: grid;
+    background-color: var(--color-white);
+    border-radius: 20px;
+}
+
+.logo {
+    margin: 5em auto;
+}
+
+.form {
+    padding: 30px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 2em;
+    /* background-color: (--color-white); */
+}
+
+.input {
+    display: grid;
+    /* color: var(--color-dark-gray-cyan); */
+}
+
+.bill {
+    display: grid;
+    grid-gap: 7px;
+    margin-bottom: 15px;
+}
+
+.tips {
+    display: grid;
+    grid-gap: 7px;
+    grid-template-columns: repeat(3, 1fr);
+    margin-bottom: 15px;
+}
+
+.people {
+    display: grid;
+    grid-gap: 7px;
+}
+
+.output {
+    padding: 30px;
+    border-radius: 20px;
+    background-color: var(--color-very-dark-cyan);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.text {
+    color: var(--color-white);
+    font-weight: 700;
+}
+
+.text > span {
+    color: var(--color-dark-grayish-cyan);
+}
+
+.tip-amount {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.total {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.amount {
+    color: var(--color-strong-cyan);
+    font-weight: 700;
+    font-size: 40px;
+}
+
+button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--color-strong-cyan);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 700;
+    color: var(--color-very-dark-cyan);
+    font-size: 16px;
+}

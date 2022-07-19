@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Tip Calculator</title>
+    <!--<link rel="stylesheet" href="main.css">-->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+             
+             spacing: {
+                '100':"600px"
+
+             },
+
+             colors: {
+                'very-dark-cyan': 'hsl(183, 100%, 15%)',
+                'dark-grey-cyan': 'hsl(186, 14%, 43%)',
+                'dark-gray-cyan':'hsl(184, 14%, 56%)',
+                'light-gray-cyan':'hsl(185, 41%, 84%)',
+                'light-grey-cyan':'hsl(189, 41%, 97%)',
+                'white':'hsl(0, 0%, 100%)',
+                'strong-cyan':'hsl(172, 67%, 45%)',
+              },
+              fontFamily: {
+                'mono': 'Space Mono, monospace'
+                
+              }
+
+           
+
+
+    
+              
+
+
+
+            }
+          }
+        }
+
+      </script>
+
+
+</head>
+<body class="bg-light-gray-cyan font-mono">
+
+    <img src="/images/logo.svg" class="mx-auto my-7" alt="logo">
+
+    <main class="bg-white p-5  rounded-3xl">
+        <section>
+
+            <div class="my-3 ">
+                <p class="font-semibold text-dark-grey-cyan">Bill</p>
+               <input type="number" class=" border w-full h-10 text-right p-2 text-xl text-very-dark-cyan"  id="bill" >
+            </div>
+             
+
+            <br>
+             <div class="my-3">
+                <p class="font-semibold text-dark-grey-cyan">Select Tip %</p>
+
+                <div class="grid grid-cols-2 gap-4">
+                <button class="five border p-2.5 rounded-md bg-very-dark-cyan text-white text-xl"  >5%</button>
+               <button class="ten border p-2.5 rounded-md bg-very-dark-cyan text-white text-xl">10%</button>
+                <button class="fift border p-2.5 rounded-md bg-very-dark-cyan text-white text-xl">15%</button>
+              <button class="twent border p-2.5 rounded-md bg-very-dark-cyan text-white text-xl">25%</button>
+               <button class="fifty border p-2.5 rounded-md bg-very-dark-cyan text-white text-xl">50%</button>
+               <input type="number" class="custom border p-2.5 rounded-md bg-light-grey-cyan text-xl text-very-dark-cyan" placeholder="Custom">
+                </div>
+                
+             </div>
+            
+
+            
+             <div class="my-3">
+                <p class="font-semibold text-dark-grey-cyan">Number of people</p>
+              <input type="number" class="people border block w-full h-10 text-right p-2 text-xl text-very-dark-cyan" >
+             </div>
+            
+    
+        </section>
+
+
+      <section class="bg-very-dark-cyan text-white p-3 rounded-3xl">
+        <div class="flex my-3 justify-between">
+            <div>
+                <h2>Tip Amount</h2>
+                <h3 class=" text-sm">/ person</h3>
+            </div>
+            <div class="tipper text-strong-cyan font-bold text-2xl">$0.00</div>
+
+        </div>
+        
+        <div class="flex my-3 justify-between">
+            <div>
+                <h2>Total</h2>
+                <h3 class="text-sm">/ person</h3>
+            </div>
+            <div class="billper text-strong-cyan font-bold text-2xl">$0.00</div>
+        </div>
+        
+
+        <input type="submit" class="reset rounded-md font-bold w-52 bg-strong-cyan text-center text-very-dark-cyan p-2 mx-10" value="RESET">
+      </section>
+
+    </main>
+    
+    
+
+    
+
+    
+
+    <script src="console.js"></script>
+</body>
+</html>
