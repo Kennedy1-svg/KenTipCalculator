@@ -68,22 +68,16 @@ function a(){
     if(custom.value < 0 || custom.value > 100 ){
         tipper.innerHTML= "0.00"
         biller.innerHTML= "0.00"
-
     }
  }
 
 
 reset.addEventListener("click", () => {
-
     people.value=''
     bill.value=''
     custom.value= ''
     tipper.innerHTML= "$0.00"
     biller.innerHTML= "$0.00"
-
-
-
-
 })
 
 
