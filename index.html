@@ -3,110 +3,131 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Length and Quantity Calculator</title>
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Tip Calculator</title>
+    <!--<link rel="stylesheet" href="main.css">-->
     <script src="https://cdn.tailwindcss.com"></script>
 
     <script>
         tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        'very-dark-cyan': 'hsl(183, 100%, 15%)',
-                        'dark-grey-cyan': 'hsl(186, 14%, 43%)',
-                        'dark-gray-cyan': 'hsl(184, 14%, 56%)',
-                        'light-gray-cyan': 'hsl(185, 41%, 84%)',
-                        'light-grey-cyan': 'hsl(189, 41%, 97%)',
-                        'white': 'hsl(0, 0%, 100%)',
-                        'strong-cyan': 'hsl(172, 67%, 45%)',
-                    },
-                    fontFamily: {
-                        'mono': 'Space Mono, monospace'
-                    },
-                    boxShadow: {
-                        '3xl': '0 35px 60px -15px rgba(0, 0, 0, 0.3)',
-                    },
-                    borderRadius: {
-                        '3xl': '1.5rem', // 24px
-                    }
-                }
+          theme: {
+            extend: {
+             
+             spacing: {
+                '100':"600px"
+
+             },
+
+             colors: {
+                'very-dark-cyan': 'hsl(183, 100%, 15%)',
+                'dark-grey-cyan': 'hsl(186, 14%, 43%)',
+                'dark-gray-cyan':'hsl(184, 14%, 56%)',
+                'light-gray-cyan':'hsl(185, 41%, 84%)',
+                'light-grey-cyan':'hsl(189, 41%, 97%)',
+                'white':'hsl(0, 0%, 100%)',
+                'strong-cyan':'hsl(172, 67%, 45%)',
+              },
+              fontFamily: {
+                'mono': 'Space Mono, monospace'
+                
+              }
+
+           
+
+
+    
+              
+
+
+
             }
+          }
         }
-    </script>
+
+      </script>
+
+
 </head>
-<body class="bg-light-gray-cyan font-mono flex flex-col justify-center items-center min-h-screen text-lg p-4">
-    <!-- <img src="https://raw.githubusercontent.com/devdnl/tip-calculator-app/main/images/logo.svg" class="mx-auto my-7 lg:my-16" alt="logo"> -->
-    <main class="bg-white p-6 rounded-3xl shadow-3xl w-full max-w-lg lg:grid lg:grid-cols-2 lg:gap-8 lg:p-8 lg:max-w-4xl">
+<body class="bg-light-gray-cyan font-mono lg:flex flex-col justify-center items-center lg:text-2xl lg:p-3">
+
+  <img src="/images/logo.svg" class="mx-auto my-7" alt="logo">
+    <main class="bg-white p-5  rounded-3xl lg:grid grid-cols-2 lg:m-10">
+      
+
         <section class="lg:p-4">
-            <div class="mb-6">
-                <p class="font-semibold text-dark-grey-cyan mb-2">Nominal Length</p>
-                <div class="relative">
-                    <!-- <img class="absolute left-4 top-1/2 -translate-y-1/2" src="https://raw.githubusercontent.com/devdnl/tip-calculator-app/main/images/icon-dollar.svg" alt="dollar icon"> -->
-                    <input type="number" class="w-full h-12 pr-4 pl-10 text-right text-2xl font-bold text-very-dark-cyan bg-light-grey-cyan rounded-md border-2 border-transparent focus:outline-none focus:border-strong-cyan transition duration-200" id="bill" placeholder="0">
-                </div>
-            </div>
 
-            <div class="mb-6">
-                <p class="font-semibold text-dark-grey-cyan mb-2">Project Required Length</p>
-                <div class="relative">
-                    <!-- <img class="absolute left-4 top-1/2 -translate-y-1/2" src="https://raw.githubusercontent.com/devdnl/tip-calculator-app/main/images/icon-person.svg" alt="person icon"> -->
-                    <input type="number" class="people w-full h-12 pr-4 pl-10 text-right text-2xl font-bold text-very-dark-cyan bg-light-grey-cyan rounded-md border-2 border-transparent focus:outline-none focus:border-strong-cyan transition duration-200" placeholder="0">
-                </div>
+            <div class="my-3 relative ">
+                <p class="font-semibold text-dark-grey-cyan">Bill</p>
+                <span>
+                  <img class = "absolute bottom-4 left-2" src="./images/icon-dollar.svg" alt="dollar icon">
+                </span>
+               <input type="number" class=" border bg-light-grey-cyan w-full h-10 text-right p-2 text-xl text-very-dark-cyan font-bold lg:text-2xl lg:h-50 lg:mb-2"  id="bill" >
             </div>
+             
 
-            <div class="mb-8">
-                <p class="font-semibold text-dark-grey-cyan mb-2">Project Required Number</p>
-                <div class="relative">
-                    <!-- <img class="absolute left-4 top-1/2 -translate-y-1/2" src="https://raw.githubusercontent.com/devdnl/tip-calculator-app/main/images/icon-person.svg" alt="person icon"> -->
-                    <input type="number" class="projectRequiredNumber w-full h-12 pr-4 pl-10 text-right text-2xl font-bold text-very-dark-cyan bg-light-grey-cyan rounded-md border-2 border-transparent focus:outline-none focus:border-strong-cyan transition duration-200" placeholder="0">
-                </div>
-            </div>
+            <br>
+             <div class="my-3">
+                <p class="font-semibold text-dark-grey-cyan lg:mb-4">Select Tip %</p>
 
-            <div class="mb-4 lg:mb-0">
-                <button class="five w-full p-3 rounded-md bg-very-dark-cyan text-white text-xl font-bold hover:bg-strong-cyan hover:text-very-dark-cyan transition duration-200">Calculate</button>
-            </div>
+                <div class="grid grid-cols-2 gap-4 lg:gap-2 lg:grid-cols-3">
+                  <button class="five border tip-percent p-2.5 rounded-md bg-very-dark-cyan text-white text-xl  hover:bg-strong-cyan hover:text-very-dark-cyan lg:w-40 lg:text-3xl"  >5%</button>
+                  <button  class="ten border tip-percent p-2.5 rounded-md bg-very-dark-cyan text-white text-xl hover:bg-strong-cyan hover:text-very-dark-cyan lg:w-40 lg:text-3xl">10%</button>
+                <button class="fift border tip-percent p-2.5 rounded-md bg-very-dark-cyan text-white text-xl hover:bg-strong-cyan hover:text-very-dark-cyan lg:w-40 lg:text-3xl">15%</button>
+              <button class="twent border tip-percent p-2.5 rounded-md bg-very-dark-cyan text-white text-xl hover:bg-strong-cyan hover:text-very-dark-cyan lg:w-40 lg:text-3xl">25%</button>
+               <button  class="fifty border tip-percent p-2.5 rounded-md bg-very-dark-cyan text-white text-xl hover:bg-strong-cyan hover:text-very-dark-cyan lg:w-40 lg:text-3xl">50%</button>
+               <input type="number" class="custom border p-2.5 rounded-md bg-light-grey-cyan text-xl text-very-dark-cyan lg:w-40 lg:text-3xl" placeholder="Custom">
+                </div>
+                
+             </div>
+            
+
+            
+             <div class="my-6 relative lg:mt-10">
+                <p class="font-semibold text-dark-grey-cyan">Number of people</p>
+                <span>
+                 <img class=" absolute bottom-3 left-2" src="./images/icon-person.svg" alt="dollar icon">
+                </span>
+               <input type="number" class="people border bg-light-grey-cyan block w-full h-10 text-right p-2 text-xl text-very-dark-cyan font-bold lg:text-2xl lg:h-50" >
+              </div>
+            
+    
         </section>
 
-        <section class="bg-very-dark-cyan text-white p-6 rounded-3xl flex flex-col justify-between">
+
+      <section class="bg-very-dark-cyan text-white p-3  rounded-3xl lg:p-10 lg:m-5">
+        <div class="flex my-3 justify-between lg:m-10">
             <div>
-                <div class="flex items-center justify-between mb-6">
-                    <div>
-                        <h2 class="text-white text-base lg:text-lg">Quantity per nominal length</h2>
-                        <p class="text-dark-gray-cyan text-xs lg:text-sm">per piece</p>
-                    </div>
-                    <div class="tipper text-strong-cyan font-bold text-2xl lg:text-3xl">0</div>
-                </div>
-
-                <div class="flex items-center justify-between mb-6">
-                    <div>
-                        <h2 class="text-white text-base lg:text-lg">Total Quantity</h2>
-                        <p class="text-dark-gray-cyan text-xs lg:text-sm">of nominal pieces</p>
-                    </div>
-                    <div class="quantity text-strong-cyan font-bold text-2xl lg:text-3xl">0</div>
-                </div>
-
-                <div class="flex items-center justify-between mb-6">
-                    <div>
-                        <h2 class="text-white text-base lg:text-lg">Off Cut Length</h2>
-                        <p class="text-dark-gray-cyan text-xs lg:text-sm">per nominal piece</p>
-                    </div>
-                    <div class="offcuts text-strong-cyan font-bold text-2xl lg:text-3xl">0</div>
-                </div>
-
-                <div class="flex items-center justify-between mb-6">
-                    <div>
-                        <h2 class="text-white text-base lg:text-lg">Extra Off Cut</h2>
-                        <p class="text-dark-gray-cyan text-xs lg:text-sm">from last piece</p>
-                    </div>
-                    <div class="offcutextra text-strong-cyan font-bold text-2xl lg:text-3xl">0</div>
-                </div>
+                <h2>Tip Amount</h2>
+                <h3 class=" text-sm">/ person</h3>
             </div>
+            <div class="tipper text-strong-cyan font-bold text-2xl lg:text-6xl">$0.00</div>
 
-            <div class="flex justify-center mt-8 lg:mt-auto">
-                <input type="submit" class="reset w-full py-3 rounded-md font-bold bg-strong-cyan text-center text-very-dark-cyan text-xl hover:bg-light-gray-cyan transition duration-200 cursor-pointer" value="RESET">
+        </div>
+        
+        <div class="flex my-3 justify-between lg:m-10">
+            <div>
+                <h2>Total</h2>
+                <h3 class="text-sm">/ person</h3>
             </div>
-        </section>
-    </main>
+            <div class="billper text-strong-cyan font-bold text-2xl lg:text-6xl">$0.00</div>
+        </div>
+
+        <div class="flex justify-center">
+          <input type="submit" class="reset  rounded-md font-bold w-56 bg-strong-cyan text-center text-very-dark-cyan p-2  lg:p-2 lg:mx-5 lg:mt-20 lg:w-96 lg:h-70" value="RESET">
+
+        </div>
+
+        
+      </section>
+
+    </main> 
+    
+    
+
+    
+
+    
+
     <script src="index.js"></script>
 </body>
 </html>
