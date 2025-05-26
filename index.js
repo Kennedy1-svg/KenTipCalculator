@@ -74,7 +74,9 @@ calculateButton.addEventListener("click", () => {
   // Calculate Off-Cut Length per nominal piece (remainder from nominalLength / projectRequiredLength)
   const offCutPerNominalPiece = nominalLength % projectRequiredLength;
   // The number of times this off-cut occurs is the total quantity needed
-  offCutLengthDisplay.innerText = `${offCutPerNominalPiece} (${totalQuantityNeeded} Nr)`;
+  offCutLengthDisplay.innerText = `${offCutPerNominalPiece} (${Math.trunc(
+    projectRequiredNumber / quantityPerNominalLength
+  )} Nr)`;
 
   // Call a function for general input validation/display updates (if needed)
   validateInputs();
